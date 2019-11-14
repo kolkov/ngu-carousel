@@ -3,9 +3,6 @@
   "dest": "../../dist/carousel",
   "deleteDestPath": false,
   "lib": {
-    "entryFile": "src/public_api.ts",
-    "externals": {
-      "Hammer": "Hammer"
-    }
+    "entryFile": "src/public-api.ts"
   }
 }
