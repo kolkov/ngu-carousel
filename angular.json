@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/ngu-carousel",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -33,6 +34,12 @@
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -140,7 +147,8 @@
           },
           "configurations": {
             "production": {
-              "project": "projects/carousel/ng-package.prod.json"
+              "project": "projects/carousel/ng-package.prod.json",
+              "tsConfig": "projects/carousel/tsconfig.lib.prod.json"
             }
           }
         },
@@ -167,5 +175,8 @@
       }
     }
   },
-  "defaultProject": "ngu-carousel"
+  "defaultProject": "ngu-carousel",
+  "cli": {
+    "analytics": "e3d4f7ec-2f4e-46f1-9d94-9d858ce2ebe8"
+  }
 }
