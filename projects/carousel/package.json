@@ -1,6 +1,6 @@
 {
-  "name": "@ngu/carousel",
-  "version": "1.6.0",
+  "name": "@kolkov/carousel",
+  "version": "1.7.0",
   "license": "MIT",
   "description": "Angular Universal carousel",
   "repository": {
@@ -9,8 +9,8 @@
   },
   "homepage": "https://ngu-carousel.firebaseapp.com",
   "peerDependencies": {
-    "@angular/common": "^8.0.0",
-    "@angular/core": "^8.0.0",
+    "@angular/common": "^9.0.0-rc.2",
+    "@angular/core": "^9.0.0-rc.2",
     "hammerjs": "^2.0.8"
   }
 }
