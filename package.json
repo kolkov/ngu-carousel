@@ -5,10 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-
     "test": "ng test",
-    "lint": "ng lint",
-    "run-lib": "ng build --project=carousel --watch",
+    "lint:lib": "ng lint carousel",
+    "build-watch:lib": "ng build carousel --watch",
     "e2e": "ng e2e",
     "test:lib": "ng test carousel",
     "build:lib": "ng build carousel",
