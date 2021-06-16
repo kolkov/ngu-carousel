@@ -9,8 +9,8 @@
   },
   "homepage": "https://ngu-carousel.firebaseapp.com",
   "peerDependencies": {
-    "@angular/common": "^9.0.0-rc.2",
-    "@angular/core": "^9.0.0-rc.2",
+    "@angular/common": ">=8.x.x <13",
+    "@angular/core": ">=8.x.x <13",
     "hammerjs": "^2.0.8"
   }
 }
