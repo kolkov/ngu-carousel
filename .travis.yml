@@ -1,23 +1,36 @@
 language: node_js
 node_js:
- - "8.11"
-
-branches:
-  only:
-    - master
-    - ng6-revamp
-
+  - "14"
+dist: trusty
 addons:
   chrome: stable
-
-before_script:
-  - yarn global add @angular/cli
-
 cache:
-  yarn: true
   directories:
     - node_modules
-
+before_install:
+  - npm update
+install:
+  - npm install
+before_script:
+  - npm install -g @angular/cli
+  - npm install -g codecov
 script:
-  - ng build --prod --project carousel
-  - ng build --prod
+  - npm run lint:lib
+  - npm run test-ci
+  - codecov
+  - npm run build-prod:lib
+before_deploy:
+  - npm run copy:readme
+  - npm run copy:changelog
+  - npm run copy:license
+  - cd dist/carousel
+deploy:
+  provider: npm
+  email: a.kolkov@gmail.com
+  skip_cleanup: true
+  api_token: $NPM_TOKEN
+  tag: latest
+  edge: true
+  on:
+    tags: true
+    repo: kolkov/carousel
