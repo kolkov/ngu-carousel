@@ -1,14 +1,23 @@
 {
-  "name": "ngu-carousel",
+  "name": "@kolkov/carousel",
   "version": "1.7.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+
     "test": "ng test",
     "lint": "ng lint",
     "run-lib": "ng build --project=carousel --watch",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "test:lib": "ng test carousel",
+    "build:lib": "ng build carousel",
+    "build-prod:lib": "ng build carousel --configuration=production",
+    "publish:lib": "npm run copy:readme && npm run copy:changelog && npm run copy:license && npm publish ./dist/carousel --tag next",
+    "copy:readme": "cpx README.md dist/carousel",
+    "copy:changelog": "cpx CHANGELOG.md dist/carousel",
+    "copy:license": "cpx LICENSE dist/carousel",
+    "test-ci": "ng test carousel --code-coverage --watch=false --browsers=ChromeHeadless && cat ./coverage/carousel/lcov.info | coveralls"
   },
   "private": true,
   "dependencies": {

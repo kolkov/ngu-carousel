@@ -151,7 +151,7 @@
           },
           "configurations": {
             "production": {
-              "project": "projects/carousel/ng-package.prod.json",
+              "project": "projects/carousel/ng-package.json",
               "tsConfig": "projects/carousel/tsconfig.lib.prod.json"
             }
           }
