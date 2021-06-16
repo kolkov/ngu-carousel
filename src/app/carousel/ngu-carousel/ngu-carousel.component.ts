@@ -335,7 +335,7 @@ export class NguCarousel<T> extends NguCarouselStore
     this.loop = this.inputs.loop || false;
     this.inputs.easing = this.inputs.easing || 'cubic-bezier(0, 0, 0.2, 1)';
     this.touch.active = this.inputs.touch || false;
-    this.RTL = this.inputs.RTL ? true : false;
+    this.RTL = this.inputs.RTL;
     this.interval = this.inputs.interval || null;
     this.velocity =
       typeof this.inputs.velocity === 'number'
