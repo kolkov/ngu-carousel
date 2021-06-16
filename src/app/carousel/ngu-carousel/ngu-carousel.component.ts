@@ -43,7 +43,7 @@ import {
   NguCarouselNextDirective,
   NguCarouselOutlet,
   NguCarouselPrevDirective
-} from './../ngu-carousel.directive';
+} from '../ngu-carousel.directive';
 import {
   NguCarouselConfig,
   NguCarouselOutletContext,
@@ -71,12 +71,14 @@ export class NguCarousel<T> extends NguCarouselStore
   activePoint: number;
   isHovered = false;
 
+  // tslint:disable-next-line:no-input-rename
   @Input('inputs')
   public inputs: NguCarouselConfig;
+  // tslint:disable-next-line:no-output-rename
   @Output('carouselLoad')
   private carouselLoad = new EventEmitter();
 
-  // tslint:disable-next-line:no-output-on-prefix
+  // tslint:disable-next-line:no-output-on-prefix no-output-rename
   @Output('onMove')
   private onMove = new EventEmitter<NguCarousel<T>>();
   // isFirstss = 0;
